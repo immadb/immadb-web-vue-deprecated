@@ -2,29 +2,35 @@
   <div id="app">
     <img src="./assets/logo.png">
     <div>
-      <el-button @click="startHacking">Start</el-button>
+      <p>
+        If Element is successfully added to this project, you'll see an
+        <code v-text="'<el-button>'"></code>
+        below
+      </p>
+      <el-button>el-button</el-button>
     </div>
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
+import HelloWorld from './components/HelloWorld.vue'
+
 export default {
-  methods: {
-    startHacking () {
-      this.$notify({
-        title: 'It works!',
-        type: 'success',
-        message: 'We\'ve laid the ground work for you. It\'s time for you to build something epic!',
-        duration: 5000
-      })
-    }
+  name: 'app',
+  components: {
+    HelloWorld
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
