@@ -1,4 +1,4 @@
-# web
+# IMMADb Web
 
 ## Project setup
 ```
