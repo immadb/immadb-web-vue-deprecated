@@ -3,11 +3,11 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
-import home from "../pages/home.vue";
-import promotions from '../pages/promotions/index.vue';
-import pastEvents from '../pages/events/past/index.vue';
-import upcomingEvents from '../pages/events/upcoming/index.vue';
-import news from '../pages/news/index.vue';
+import home from "@/pages/home.vue";
+import promotions from '@/pages/promotions/index.vue';
+import pastEvents from '@/pages/events/past/index.vue';
+import upcomingEvents from '@/pages/events/upcoming/index.vue';
+import news from '@/pages/news/index.vue';
 
 const routes = [
     {

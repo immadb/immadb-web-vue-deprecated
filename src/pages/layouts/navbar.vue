@@ -1,5 +1,10 @@
 <template>
-    <el-menu :default-active="activeIndex" :router="true" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+    <el-menu
+        :router="true"
+        :default-active="$route.path"
+        mode="horizontal"
+        @select="handleSelect"
+    >
         <el-menu-item index="1" :route="{ name: 'promotions' }">Promotions</el-menu-item>
         <el-submenu index="2" text="Events" right>
             <template slot="title">Events</template>
@@ -14,13 +19,6 @@
 export default {
     mounted() {
         console.log('Navbar mounted.')
-    },
-
-    data() {
-        return {
-            activeIndex: '1',
-            activeIndex2: '1',
-        };
     },
 
     methods: {

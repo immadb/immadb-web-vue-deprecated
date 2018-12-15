@@ -1,33 +1,16 @@
 <template>
     <div id="app">
-        <immadb-navbar id="siteNavigation" />
-
-        <img src="./assets/logo.png">
-        <div>
-            <p>
-                If Element is successfully added to this project, you'll see an
-                <code v-text="'<el-button>'"></code>
-                below
-            </p>
-            <el-button>el-button</el-button>
-        </div>
-        <HelloWorld msg="Welcome to Your Vue.js App"/>
-
-        <!-- route outlet -->
-        <!-- component matched by the route will render here -->
-        <router-view></router-view>
+        <immadb-layout />
     </div>
 </template>
 
 <script>
-    import HelloWorld from './components/HelloWorld.vue'
-    import navbar from './pages/layouts/navbar.vue';
+    import layout from '@/pages/layouts/main.vue';
 
     export default {
         name: 'app',
         components: {
-            HelloWorld,
-            'immadb-navbar': navbar,
+            'immadb-layout': layout,
         }
     }
 </script>
